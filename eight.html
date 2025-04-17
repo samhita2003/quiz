@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" class="min-h-screen m-0 p-0 overflow-x-hidden bg-[#e6ebff]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="icon" type="image" href="src/images/logo.png"/>
+    <link rel="stylesheet" href="dist/style.css" />
+    <style>
+      .time {
+        color: white;
+        font-size: 3em;
+        text-align: center;
+        padding: 40px;
+        transition: all 0.5s linear;
+      }
+      
+      
+      .time.warning {
+        color: red;
+      }
+      
+      .message,.home-link{
+        position: absolute;
+        color: green;
+        font-size: 1.5rem;
+        top: -80%;
+        left: 5%;
+        cursor: pointer;
+      }
+      
+      .home-link{
+        top: -50%;
+        left: 15%;
+      }
+      
+      
+      
+            @media screen and (min-width: 344px) and (max-width: 576px) {
+              .parent1{
+              display: flex;
+              flex-direction: column;
+              }
+              main{
+          position: relative;
+        }
+         .clock{
+          position: absolute;
+          top: 3rem;
+          right: 50%;
+          transform: translateX(50%);
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        } 
+        .divChild,.child1{
+          width: 60%;
+          padding: 1rem;
+          margin: 12rem auto 1rem auto;
+          font-size: small;
+        }
+        .child1{
+          margin: 1.5rem auto 1rem auto;
+        }
+        .time {
+          font-size: 0.8rem;
+          padding: 20px;
+          font-weight: bold;
+        }
+      
+        .time.warning {
+          font-size: 0.8rem;
+        }
+           
+      }
+      
+      
+       
+      @media screen and (min-width: 577px) and (max-width: 992px) {
+         .parent1{
+          display: flex;
+          flex-direction: column;
+        } 
+        main{
+          position: relative;
+        }
+         .clock{
+          position: absolute;
+          top: 3rem;
+          right: 50%;
+          transform: translateX(50%);
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        } 
+        .divChild,.child1{
+          width: 70%;
+          padding: 2rem;
+          margin: 15rem auto 1rem auto;
+        }
+        .child1{
+          margin: 1.5rem auto 1rem auto;
+        }
+        .time {
+          font-size: 1.5rem;
+          padding: 25px;
+          font-weight: bold;
+        }
+      
+        .time.warning {
+          font-size: 1.3rem;
+        }
+      } 
+    </style>
+    </head>
+    <body class="min-h-screen m-0 p-0 bg-[#e6ebff] overflow-x-hidden">
+      <main class="min-h-screen m-0 p-0 bg-[#e6ebff] overflow-x-hidden">  
+        <div class="grid grid-cols-2 grid-rows-11 gap-4 parent1 min-h-screen m-0 p-0 bg-[#e6ebff] overflow-x-hidden">
+          <div class="row-span-3 bg-white shadow-[20px_20px_60px_#d9d9d9,-20px_-20px_60px_#ffffff] m-8 p-16 text-center text-lg font-bold tracking-widest rounded-xl divChild">Guess the food: 🍞🧀🔥</code></div>
+          <div class="row-span-2 col-start-1 row-start-4 bg-white shadow-[20px_20px_60px_#d9d9d9,-20px_-20px_60px_#ffffff] text-center text-lg font-bold tracking-widest rounded-4xl m-8 p-6 relative child h-fit uppercase cursor-pointer child1">Grilled Cheese</div>
+          <div class="row-span-2 col-start-1 row-start-6 bg-white shadow-[20px_20px_60px_#d9d9d9,-20px_-20px_60px_#ffffff] text-center text-lg font-bold tracking-widest rounded-4xl m-8 p-6 relative child h-fit uppercase cursor-pointer child1">Toasted Cheese</div>
+          <div class="row-span-2 col-start-1 row-start-8 bg-white shadow-[20px_20px_60px_#d9d9d9,-20px_-20px_60px_#ffffff] text-center text-lg font-bold tracking-widest rounded-4xl m-8 p-6 relative child h-fit uppercase cursor-pointer child1">Cheese Pizza</div>
+          <div class="row-span-2 col-start-1 row-start-10 bg-white shadow-[20px_20px_60px_#d9d9d9,-20px_-20px_60px_#ffffff] text-center text-lg font-bold tracking-widest rounded-4xl m-8 p-6 relative child h-fit uppercase cursor-pointer child1">Cheese Burger</div>
+          <div class="row-span-11 col-start-2 row-start-1 grid justify-center items-center clockParent">
+            <div class="clock w-96 h-40 bg-slate-800 rounded-2xl relative"></div>         
+        </div>
+      </main>
+      <script src="/emoji.js" defer type="module"></script>
+    </body>
+    </html>

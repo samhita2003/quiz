@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" class="min-h-screen m-0 p-0 overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="icon" type="image" href="src/images/logo.png"/>
+    <link rel="stylesheet" href="dist/style.css" />
+    <style>
+       @keyframes spin-reverse {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+  }
+
+  .reverse-spin {
+    animation: spin-reverse 0.5s linear infinite;
+  }
+    </style>
+    </head>
+    <body class="min-h-screen m-0 p-0 overflow-x-hidden">
+      <main class="min-h-screen m-0 p-0 flex justify-center items-center overflow-x-hidden">
+        <div class="relative inline-block w-20 h-20 rounded-full border-t-4 border-[#4169E1] border-r-4 border-r-transparent box-border animate-spin">
+          <span class="absolute top-0 left-0 w-20 h-20 rounded-full border-l-4 border-[#FF3D00] border-b-4 border-b-transparent box-border animate-spin reverse-spin"></span>
+        </div>              
+      </main>
+      <script type="module">
+        const selectedClass = localStorage.getItem("selectedClass");
+        if (selectedClass?.includes("tech")) {
+          setTimeout(() => {
+      window.location.href = "third.html";
+    }, 3000);
+        } else if (selectedClass?.includes("culture")) {
+          setTimeout(() => {
+      window.location.href = "six.html";
+    }, 3000);
+        } else {
+          setTimeout(() => {
+      window.location.href = "eight.html";
+    }, 3000);
+  }
+         
+      </script>
+    </body>
+    </html>

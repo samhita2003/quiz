@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" class="min-h-screen m-0 p-0 bg-[#e6ebff] overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="icon" type="image" href="src/images/logo.png"/>
+    <link rel="stylesheet" href="dist/style.css" />
+    <script src="src/main.js" defer type="module"></script>
+    <style>
+      .divParent > .resChildren {
+        margin-bottom: 1rem;
+      }
+
+  div.shiny-button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  margin: 2rem;
+  padding: 1rem 1.5rem;
+  color: #cff8ff;
+  border: 3px solid transparent;
+  border-radius: 60px;
+  background-color: #064549;
+  background-image: linear-gradient(to bottom right, #0a6b73, #020a0e), linear-gradient(125deg, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 53%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100%, 200%;
+  background-position: 0px, -250px;
+  -webkit-animation: 4s border-glint linear backwards infinite;
+          animation: 4s border-glint linear backwards infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  box-shadow: rgba(0, 0, 0, 0.6) 8px 8px 8px;
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.25s, text-shadow 0.25s;
+  overflow: hidden;
+}
+
+div.shiny-button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, #184db1, #184db1), linear-gradient(125deg, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 53%);
+  color: #fafaff;
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 5px 5px;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.7);
+  transition: box-shadow 0.25s, text-shaddw 0.25s;
+}
+
+div.shiny-button::after {
+  content: " ";
+  position: absolute;
+  top: -50%;
+  left: -120%;
+  width: 200%;
+  height: 200%;
+  background-image: linear-gradient(125deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 52%);
+  -webkit-animation: 4s glint linear backwards infinite;
+          animation: 4s glint linear backwards infinite;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+}
+
+@-webkit-keyframes glint {
+  0% {
+    left: -120%;
+  }
+  8% {
+    left: 50%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes glint {
+  0% {
+    left: -120%;
+  }
+  8% {
+    left: 50%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@-webkit-keyframes border-glint {
+  0% {
+    background-position: 0px, -250px;
+  }
+  25% {
+    background-position: 0px, -200px;
+  }
+  75% {
+    background-position: 0px, 50px;
+  }
+  100% {
+    background-position: 0px, 50px;
+  }
+}
+@keyframes border-glint {
+  0% {
+    background-position: 0px, -250px;
+  }
+  25% {
+    background-position: 0px, -200px;
+  }
+  75% {
+    background-position: 0px, 50px;
+  }
+  100% {
+    background-position: 0px, 50px;
+  }
+}
+
+@media screen and (min-width: 344px) and (max-width: 576px) {
+  .divParent {
+    display: flex;
+    flex-direction: column;
+  }
+  .responsive {
+    width: 90%;
+    margin: 0.5rem auto 0.5rem auto;
+  }
+  .resChild,.resChildren{
+    width: 60%;
+    height: 4.5rem;
+    font-size: small;
+    margin: 1rem auto 1rem auto;
+    padding: 0.6rem 0 0 0;
+    line-height: 1.5rem;
+  }
+  .resChildren{
+    line-height: normal;
+    padding: 1.5rem 0 0 0;
+  }
+   .shiny-button{
+    margin-bottom: 3rem !important;
+  } 
+}
+
+
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .divParent {
+    display: flex;
+    flex-direction: column;
+  }
+  .responsive {
+    width: 80%;
+    margin: 1.5rem auto 0.5rem auto;
+  }
+  .resChild,.resChildren{
+    width: 80%;
+    height: 4.5rem;
+    font-size: large;
+    margin: 1rem auto 1rem auto;
+    padding: 1rem 0 0 0;
+    line-height: 1.5rem;
+  }
+  .resChildren{
+    line-height: normal;
+    padding: 1.5rem 0 0 0;
+  }
+}
+
+
+    </style>
+  </head>
+  <body class="min-h-screen m-0 p-0 overflow-x-hidden">
+<div class="grid grid-cols-4 grid-rows-5 gap-5 mt-5 divParent  overflow-x-hidden">
+  <div class="col-span-2 row-span-5 m-4 rounded-3xl responsive"><img src="src/images/quiz.png" class="rounded-xl responsive"></div>
+  <div class="col-span-2 row-span-2 col-start-3 shadow-custom text-2xl font-bold m-4 rounded-xl text-center p-11 resChild">Please select one topic from the three options provided.</div>
+  <div class="col-span-2 col-start-3 row-start-3 shadow-custom text-lg font-bold mr-4 ms-4 rounded-2xl text-center p-5 cursor-pointer tech resChildren" id="divChild">TECH</div>
+  <div class="col-span-2 col-start-3 row-start-4 shadow-custom text-lg font-bold mr-4 ms-4 rounded-2xl text-center p-5 cursor-pointer culture resChildren" id="divChild">CULTURE</div>
+  <div class="col-span-2 col-start-3 row-start-5 shadow-custom text-lg font-bold mr-4 ms-4 rounded-2xl text-center p-5 cursor-pointer emoji resChildren" id="divChild">EMOJI</div>
+</div> 
+  <div class="parent w-full mt-12 flex justify-center relative">
+    <div class="shiny-button">
+      START
+  </div>
+ </div>
+  </body>
+  </html>
+
+
+
+
+
+ 
+
+ 
