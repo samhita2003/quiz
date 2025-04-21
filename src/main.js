@@ -54,6 +54,18 @@ if (btn) {
         console.log(selectedDiv.className);
         
         localStorage.setItem("selectedClass", selectedDiv.className); 
+        if (selectedDiv) {
+          let alert = document.createElement("div");
+          alert.innerHTML = "SCROLL DOWN TO PROCEED!";
+          for (let i in obj) {
+            alert.style[i] = obj[i];
+          }
+          alert.style.top = "50px";
+          document.body.appendChild(alert);
+          setTimeout(() => {
+            alert.remove();
+          }, 3000);
+        }
       }
     });
     button.addEventListener("click", () => {
