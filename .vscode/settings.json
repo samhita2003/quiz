@@ -1,0 +1,9 @@
+{
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.mappings": {
+    "@assets": "./src/assets",
+    "@components": "./src/components"
+  },
+}
